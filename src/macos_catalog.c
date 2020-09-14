@@ -3,11 +3,10 @@
 //
 
 #include "libiupdate/libiupdate.h"
+#include <curl/curl.h>
 
-libiupdate_error_t iupdate_get_mac_catalog(char* version, char* seed, char** url) {
-    if (seed == NULL) {
-        seed = iupdate_mac_public_seed;
-    }
+libiupdate_error_t iupdate_get_mac_catalog_url(char* version, char* seed, char** url) {
+
 
     return IUPDATE_E_SUCCESS;
 }

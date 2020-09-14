@@ -11,6 +11,18 @@ typedef enum {
 
 typedef void* iupdate_mac_catalog;
 
+/*
+ * https://mesu.apple.com/assets/audio/
+https://mesu.apple.com/assets/tv/
+https://basejumper.apple.com/livability/audio/%s/
+https://basejumper.apple.com/livability/%s/
+https://mesu.apple.com/systemassets/
+ https://basejumper.apple.com/systemassets/
+ https://gdmf.apple.com/v2/pmv
+ https://gdmf-staging-int.apple.com/v2/assets
+https://gdmf.apple.com/v2/assets
+ https://xp.apple.com/report/2/psr_ota
+ */
 const char* iupdate_mac_developer_seed = "DeveloperSeed";
 const char* iupdate_mac_customer_seed = "CustomerSeed";
 const char* iupdate_mac_public_seed = "PublicSeed";
@@ -18,9 +30,17 @@ const char* iupdate_mac_default_catalog = "https://swscan.apple.com/content/cata
 
 const char* iupdate_bridgeos_url = "https://mesu.apple.com/assets/bridgeos/com_apple_bridgeOSIPSW/com_apple_bridgeOSIPSW.xml";
 
+const char* iupdate_tv_assts = "https://mesu.apple.com/assets/tv/";
+
+const char* iupdate_gdmf = "https://gdmf.apple.com/v2/assets";
+
+const char* iupdate_mobileasset_url_base = "https://mesu.apple.com/assets/";
+const char* iupdate_mobileasset_softwareupdate = "com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml";
+const char* iupdate_mobileasset_softwareupdatebrain = "com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain/com_apple_MobileAsset_MobileSoftwareUpdate_UpdateBrain.xml"
 
 
-libiupdate_error_t iupdate_get_mac_catalog(char* version, char* seed, char** url);
+
+libiupdate_error_t iupdate_get_mac_catalog_url(char* version, char* seed, char** url);
 libiupdate_error_t iupdate_open_mac_catalog_by_url(char* url, iupdate_mac_catalog* catalog);
 
 #endif //LIBIUPDATE_LIBIUPDATE_H
