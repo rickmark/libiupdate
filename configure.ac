@@ -1,0 +1,35 @@
+
+AC_PREREQ(2.64)
+AC_INIT([libiupdate], 1.0)
+AC_CONFIG_MACRO_DIRS([m4])
+AM_INIT_AUTOMAKE([foreign])
+AC_CONFIG_SRCDIR([src/])
+AC_CONFIG_HEADERS([config.h])
+
+LIBPLIST_VERSION=2.2.0
+
+AC_PROG_CC
+AC_PROG_CXX
+AM_PROG_CC_C_O
+AC_PROG_LIBTOOL
+
+AC_HEADER_STDC
+AC_CHECK_HEADERS([stdint.h stdlib.h string.h gcrypt.h])
+
+AC_C_CONST
+AC_TYPE_SIZE_T
+AC_TYPE_SSIZE_T
+AC_TYPE_UINT16_T
+AC_TYPE_UINT32_T
+AC_TYPE_UINT8_T
+
+AC_CHECK_FUNCS([asprintf strcasecmp strdup strerror strndup stpcpy vasprintf])
+
+PKG_CHECK_MODULES(libplist, libplist-2.0 >= $LIBPLIST_VERSION)
+
+LIBCURL_CHECK_CONFIG
+
+
+
+AC_CONFIG_FILES(Makefile)
+AC_OUTPUT
