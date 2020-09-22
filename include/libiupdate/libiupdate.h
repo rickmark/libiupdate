@@ -22,6 +22,10 @@ https://mesu.apple.com/systemassets/
  https://gdmf-staging-int.apple.com/v2/assets
 https://gdmf.apple.com/v2/assets
  https://xp.apple.com/report/2/psr_ota
+ http://gg.apple.com/fdrtrustobject
+ http://gs.apple.com:80/
+http://vega-dr.apple.com:8080/vegads/fuser
+http://treecko-dr.apple.com:8080/TREECKO/controller
  */
 const char* iupdate_mac_developer_seed = "DeveloperSeed";
 const char* iupdate_mac_customer_seed = "CustomerSeed";
